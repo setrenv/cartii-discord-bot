@@ -1,19 +1,4 @@
-const express = require("express");
-const { exec } = require("child_process");
 
-const app = express();
-app.get("/deploy", (req, res) => {
-  exec("node deploy-commands.js", (err, stdout, stderr) => {
-    if (err) {
-      console.error(err);
-      return res.status(500).send("Deploy failed");
-    }
-    console.log(stdout);
-    res.send("Slash commands deployed");
-  });
-});
-
-app.listen(process.env.PORT || 3000);
 require("dotenv").config();
 const { Client, Collection, GatewayIntentBits } = require("discord.js");
 const fs = require("fs");
