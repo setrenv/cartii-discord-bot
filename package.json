@@ -1,0 +1,15 @@
+{
+  "name": "cartii-discord-bot",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "deploy": "node deploy-commands.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "node-fetch": "^2.6.7",
+    "dotenv": "^16.4.5"
+  }
+}
